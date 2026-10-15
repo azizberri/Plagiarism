@@ -1,22 +1,34 @@
-# Resources (verify current availability; none were opened in full this session)
+# Resources (status as of 2026-10-15; page contents read via curl unless noted)
 
-Sources of the recommendations: WebSearch results from tradermath.org, quantvault.org, tradinginterview.com, techinterview.org, quantt.co.uk, QuantNet, a Tina Huang YouTube video. Several are vendors of paid prep; treat their praise of their own product accordingly.
+Many recommending sites sell prep (QuantVault, Quantt, QuantBrainTeasers, TraderMath, TradingInterview, Aced/Exponent). Their praise of their own tools is marketing; the books and free firm material are the safest core.
 
-## Books (consistent across sources)
-1. **A Practical Guide to Quantitative Finance Interviews** (Xinfeng Zhou, "Green Book") - most recommended; solutions are terse, so work problems actively.
-2. **Fifty Challenging Problems in Probability** (Mosteller) - short; gambler's ruin, coin-pattern races; best first book for a trader.
-3. **Heard on the Street** (Timothy Crack) - brainteasers, mental math, option intuition; lighter on heavy probability.
-4. **Frequently Asked Questions in Quantitative Finance** (Wilmott) and **Quant Job Interview Questions and Answers** (Joshi) - harder, derivatives/model-flavoured; mostly for research or bank roles.
-5. **Options, Futures, and Other Derivatives** (Hull) - cross-check option formulas/Greeks.
-6. A first-course probability text you already own (your course notes may suffice for fundamentals).
+## Free and firm-official
+- Jane Street **Probability & Markets guide** (PDF, 12 pages) - read first; summarised in `jane-street-official-guide.md`.
+- **Zetamac** arithmetic sprint (default 120 s). Reported benchmarks (candidate-reported): <40 not ready, 45-55 baseline, 55-70 competitive, 70+ strong.
+- Akuna **Options 101** course (part of some Akuna funnels; named by quantt.co.uk).
+- Optiver / SIG / IMC careers pages describe their assessments; not read this session.
 
-## Drills / platforms
-- **Zetamac** (arithmetic sprint): daily 2-min warm-up. Reported benchmarks: ~50 solid, 70+ competitive on 120 s default-style sprints (candidate-reported).
-- Drill times tables, addition facts and complements to 100 before grinding randomly (vendor claim, plausible).
-- **tradinginterview.com** (market-making and betting games, 80-in-8 simulator), **tradermath.org**, **quantvault.org**, **myntbit**, **techinterview.org** - guides and practice; some content paid.
-- Market-making practice: do "make me a market" with a friend as counterparty; explain every quote aloud.
+## Books (consistent across QuantVault, tradermath, quantnet snippets)
+| Book | Use |
+|---|---|
+| *A Practical Guide to Quantitative Finance Interviews* (Xinfeng Zhou, "Green Book") | Default first book; HRT phone problems are reported variants of it; terse solutions, work actively |
+| *Heard on the Street* (Timothy Crack) | Breadth: brainteasers, reasoning aloud; lighter on modern probability |
+| *Fifty Challenging Problems in Probability* (Mosteller) | Short, interview-flavoured reps |
+| *A First Course in Probability* (Sheldon Ross) | Rebuild fundamentals if conditional probability/expectation/distributions are shaky (your course notes may already do this) |
+| *Quant Job Interview Questions and Answers* (Joshi) | Derivatives pricing/C++ desk-quant roles; wrong start for pure trader prep |
+| Hull, *Options, Futures, and Other Derivatives* | Cross-check Greeks/put-call parity |
 
-## Video / community
-- YouTube: Tina Huang, "What to Expect in a Quant Trader Interview Process?" (2021; recommends Zetamac and Heard on the Street). No other channel was verified; search YouTube for "market making interview" and judge by whether the video solves problems aloud.
-- QuantNet thread "I'm Junior Quant Trader at T1 Prop firm" (AMA); QuantNet "Mental Math Struggle"; 1point3acres and Glassdoor candidate reports per firm.
-- Not found via search: Reddit r/quant and Wall Street Oasis threads. Ask the user to paste any they find.
+## Practice platforms (freemium)
+tradinginterview.com (market-making/betting games, 80-in-8), quantvault.org ("Make a Market" game, mental-math pages), quantt.co.uk (80-in-8 simulator, mental math trainer), quantbrainteasers.com (question bank by firm), tradermath.org, myntbit.com. Pair any platform with a human counterparty for market-making.
+
+## YouTube (titles/authors verified through YouTube oEmbed; content not watched, transcripts unavailable)
+- Jane Street, "A Jane Street Trading Mock Interview with Graham and Andrea": https://www.youtube.com/watch?v=NT_I1MjckaU (firm-produced; best video lead)
+- Tina Huang, "The quant trader interview guide": https://www.youtube.com/watch?v=SIsjD2bxuoc (2021 overview; recommends Zetamac, Heard on the Street)
+- Confident Math Success with Dylan, "Practical Guide to Quantitative Finance Interviews (Chapter 4.1)": https://www.youtube.com/watch?v=VZAlNV2NQw0 (Green Book walkthrough)
+- "Quant Trader Interview | Probability | Permutation & Combination": https://www.youtube.com/watch?v=ijZ75fVHMH0
+- Dylan Chou, "Wall Street Quant interview be likes": https://www.youtube.com/watch?v=CgrvpspDBLM (simulated interview, bilingual subtitles)
+- Playlist "Quant Interview Questions": https://www.youtube.com/playlist?list=PLjomwUQ3wWLuulvwC_HfDB6BpLIKsOBXX
+No channel specialising in market-making mock interviews was found.
+
+## Communities
+QuantNet "I'm Junior Quant Trader at T1 Prop firm" AMA (page returns HTTP 403 to curl; ask the user to paste it), 1point3acres and Glassdoor firm reports (search snippets only). Reddit r/quant and Wall Street Oasis: not reachable (search tool refuses reddit.com); ask the user to paste threads.

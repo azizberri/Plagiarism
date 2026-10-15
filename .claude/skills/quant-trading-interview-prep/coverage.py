@@ -8,6 +8,7 @@ Prints, per topic: priority, keyword hits, which files hit, and a verdict:
   COVERED  - strong evidence your course material includes it (still verify depth)
   PARTIAL  - some mentions; probably intro level
   GAP      - no evidence in your documents
+  N/A      - practice skill that documents cannot show (always needs deliberate practice)
 Keyword hits show a topic APPEARS in your material, not that you mastered it.
 """
 import argparse, json, os, re, subprocess, sys, zipfile
@@ -62,6 +63,10 @@ def main():
         if a.role == "research" and t["id"] in ("statistics", "linear-algebra-calculus", "stochastic-calculus", "ml-timeseries", "coding"):
             pri = "high"
         pats = [re.compile(k) for k in t["keywords"]]
+        if not pats:  # skills that cannot be detected in documents (e.g. communication)
+            out.append({"id": t["id"], "name": t["name"], "priority": pri, "verdict": "N/A", "hits": 0,
+                        "distinct_keywords": 0, "files": {}, "note": t.get("note", "")})
+            continue
         per_file, total, distinct = {}, 0, set()
         for f, txt in corpus.items():
             n = 0
@@ -84,7 +89,7 @@ def main():
             print(f"           note: {o['note']}")
     print("\nPriority gaps (core/high that are GAP or PARTIAL):")
     for o in out:
-        if o["priority"] in ("core", "high") and o["verdict"] != "COVERED":
+        if o["priority"] in ("core", "high") and o["verdict"] not in ("COVERED", "N/A"):
             print(f"  * {o['name']} -> {o['verdict']}")
     if a.json:
         Path(a.json).write_text(json.dumps(out, indent=2))
