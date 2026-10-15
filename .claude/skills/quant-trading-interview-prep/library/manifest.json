@@ -1,0 +1,18 @@
+{
+ "next_id": 3,
+ "sources": [
+  {
+   "id": "S1",
+   "title": "Jane Street Probability and Markets Guide",
+   "file": "sources/jane-street/S1_Jane Street Probability and Markets Guide.pdf",
+   "kind": "official",
+   "origin": "janestreet.com/static/pdfs/trading-interview.pdf",
+   "firm": [
+    "jane-street"
+   ],
+   "sha256": "208397abe4bcbc86321e3baa5aed94d589d6b87531183ac71ba66ff71f2b22f9",
+   "chunks": 34,
+   "added": "2026-10-15"
+  }
+ ]
+}
